@@ -1,24 +1,35 @@
-<!doctype html>
-<html class="no-js" lang="">
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-        <title>your boilerplate project</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="theme-color" content="#212121" />
-
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/main.css">
-
-    </head>
-    <body>
-        <p>put your HTML here</p>
-
-        <script language="javascript" type="text/javascript" src="js/vendor/p5.js"></script>
-        <!--<script language="javascript" src="js/vendor/p5.dom.js"></script>-->
-        <!--<script language="javascript" src="js/vendor/p5.sound.js"></script>-->
-
-        <script src="js/main.js"></script>
-    </body>
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="p5.min.js"></script>
+    <script src="p5.dom.min.js"></script>
+    <script src="p5.sound.min.js"></script>
+    <script src="matter.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+    <script>
+        var firebaseConfig = {
+  apiKey: "AIzaSyArMdpsykgSBzQmVzn5UVXbXVex66DDkMQ",
+  authDomain: "realtime-painting-f1644.firebaseapp.com",
+  databaseURL: "https://realtime-painting-f1644.firebaseio.com",
+  projectId: "realtime-painting-f1644",
+  storageBucket: "realtime-painting-f1644.appspot.com",
+  messagingSenderId: "970940074797",
+  appId: "1:970940074797:web:7adbfd54b0b3e05b6221a4"
+};
+    firebase.initializeApp(firebaseConfig);
+</script>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <meta charset="utf-8">
+</head>
+<body>
+<div id = "canvascontainer">
+  <script src="sketch.js"></script>
+</div>
+<p>
+  <button id = "clearbutton">
+    clearDrawing
+  </button>
+</p>
+</body>
 </html>
